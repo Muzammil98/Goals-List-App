@@ -1,18 +1,25 @@
 import React, {Component} from 'react';
-import {Container, Spinner} from 'native-base';
+import {Container, Spinner, Root} from 'native-base';
+import {Keyboard, TouchableWithoutFeedback} from 'react-native';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
 import {store, persistor} from './store';
-import Login from './components/Login';
+
+import Todo from './components/Todo';
 
 class App extends Component {
   render() {
+    console.disableYellowBox = true;
     return (
       <Provider store={store}>
         <PersistGate persistor={persistor} loading={<Spinner />}>
           <Container style={{flex: 1}}>
-            <Login />
+            <Root>
+              <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+                <Todo />
+              </TouchableWithoutFeedback>
+            </Root>
           </Container>
         </PersistGate>
       </Provider>

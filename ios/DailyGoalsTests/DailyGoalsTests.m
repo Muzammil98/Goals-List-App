@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface ReduxNativeTests : XCTestCase
+@interface DailyGoalsTests : XCTestCase
 
 @end
 
-@implementation ReduxNativeTests
+@implementation DailyGoalsTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

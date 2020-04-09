@@ -2,6 +2,7 @@ import {createStore, applyMiddleware, compose} from 'redux';
 import rootReducer from './redux/reducers';
 import thunk from 'redux-thunk';
 import {persistStore} from 'redux-persist';
+import logger from 'redux-logger';
 
 const initialState = {};
 const middleware = [thunk];
@@ -13,7 +14,7 @@ export const store = createStore(
     applyMiddleware(...middleware),
     window.__REDUX_DEVTOOLS_EXTENSION__
       ? window.__REDUX_DEVTOOLS_EXTENSION__()
-      : f => f,
+      : (f) => f,
   ),
 );
 export const persistor = persistStore(store);
