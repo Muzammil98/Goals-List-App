@@ -2,12 +2,6 @@ import React, {Component} from 'react';
 import {Text, StyleSheet, View, FlatList, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 class List extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
   render() {
     const todosList = this.props.todos.map((todo) => {
       return (

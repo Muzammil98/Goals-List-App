@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Text, StyleSheet, View, ScrollView, Alert} from 'react-native';
-import {Toast, H1, H3} from 'native-base';
+import {Toast, H1} from 'native-base';
 import {addGoal, deleteGoal} from '../redux/actions/listActions';
 import TodoInput from './TextInput';
 import TodosList from './List';

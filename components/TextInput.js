@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, TextInput, Alert} from 'react-native';
-import {Button, Text, Toast} from 'native-base';
+import {Button, Text} from 'native-base';
 import Icon from 'react-native-vector-icons/Ionicons';
-// import {addGoal} from '../redux/actions/listActions';
-// import {connect} from 'react-redux';
 
 const InputHandler = (props) => {
   const [goal, setGoal] = useState('');
@@ -48,5 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-// export default connect(null, {addGoal})(InputHandler);
 export default InputHandler;
